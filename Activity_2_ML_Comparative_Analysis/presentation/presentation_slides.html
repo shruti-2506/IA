@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIML Activity 2: ML Comparative Analysis Presentation | MIT AOE</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #f8fafc; overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
+    .header { background: #1e293b; padding: 12px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #3b82f6; }
+    .header h1 { font-size: 1.1rem; color: #60a5fa; font-weight: 600; }
+    .header .meta { font-size: 0.85rem; color: #94a3b8; }
+    .slide-container { flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px; position: relative; }
+    .slide { display: none; width: 92%; max-width: 1100px; height: 85%; background: #1e293b; border-radius: 16px; padding: 40px 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid #334155; overflow-y: auto; }
+    .slide.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .slide-title { font-size: 1.8rem; color: #38bdf8; margin-bottom: 8px; border-bottom: 2px solid #0284c7; padding-bottom: 8px; }
+    .slide-subtitle { font-size: 1rem; color: #94a3b8; margin-bottom: 25px; }
+    .slide-content { font-size: 1.05rem; line-height: 1.6; color: #e2e8f0; }
+    .slide-content ul { margin-left: 25px; margin-bottom: 15px; }
+    .slide-content li { margin-bottom: 10px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+    .card { background: #0f172a; padding: 20px; border-radius: 12px; border-left: 4px solid #38bdf8; }
+    .card h3 { color: #60a5fa; margin-bottom: 10px; font-size: 1.2rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.95rem; }
+    th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #334155; }
+    th { background: #0f172a; color: #38bdf8; font-weight: 600; }
+    tr:hover { background: rgba(56, 189, 248, 0.05); }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 6px; font-weight: bold; font-size: 0.8rem; background: #059669; color: white; }
+    .footer { background: #1e293b; padding: 12px 30px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; }
+    .nav-btn { background: #2563eb; color: white; border: none; padding: 8px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    .nav-btn:hover { background: #1d4ed8; }
+    .nav-btn:disabled { background: #475569; cursor: not-allowed; }
+    .slide-indicator { font-weight: 600; color: #94a3b8; font-size: 0.95rem; }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>MIT Academy of Engineering | AIML Activity 2: ML Comparative Analysis</h1>
+    <div class="meta">Student: [Student Name] | Seat: [Seat Number] | PRN: [PRN Number]</div>
+</div>
+
+<div class="slide-container">
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h2 class="slide-title">Implementation and Performance Evaluation with Comparative Analysis of Machine Learning Models</h2>
+        <p class="slide-subtitle">Course Code: 2304322T | Semester V | Department of Computer Engineering | AY 2026-2027</p>
+        <div class="slide-content">
+            <div class="card" style="margin-bottom: 20px;">
+                <h3>College Demonstration & Evaluation Activity No. 2</h3>
+                <p><strong>Institution:</strong> MIT Academy of Engineering, Alandi (D), Pune - 412105</p>
+                <p><strong>Candidate Details:</strong> Student Name: <code>[Student Name]</code> | Seat No: <code>[Seat Number]</code> | PRN: <code>[PRN Number]</code></p>
+                <p><strong>Team Members:</strong> <code>[Student Name 1]</code>, <code>[Student Name 2]</code>, <code>[Student Name 3]</code>, <code>[Student Name 4]</code></p>
+                <p><strong>Course Outcomes Covered:</strong> CO2 (Problem Analysis), CO4 (Modern Tools & Evaluation) | <strong>Marks:</strong> 20M</p>
+            </div>
+            <p>This presentation demonstrates the complete, empirical benchmarking of 12 Machine Learning algorithms across two real-world domains: Open-Meteo Weather Forecasting and Global Disaster Hazard Classification.</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 2: Project Abstract</h2>
+        <p class="slide-subtitle">Executive Summary of Real-Time ML Applications</p>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🌡️ Task 1: Weather Prediction (Regression)</h3>
+                    <ul>
+                        <li><strong>Dataset:</strong> Open-Meteo Pune Hourly Archive (42,360 records).</li>
+                        <li><strong>Target:</strong> 2-Meter Ambient Temperature (<code>temperature_2m</code>).</li>
+                        <li><strong>Models:</strong> Linear, Decision Tree, Random Forest, SVR, KNN, MLP.</li>
+                        <li><strong>Top Performer:</strong> <strong>Support Vector Regression (SVR)</strong> with $R^2 = 0.9996$ and $\text{RMSE} = 0.0942^\circ\text{C}$.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🌪️ Task 2: Disaster Classification</h3>
+                    <ul>
+                        <li><strong>Dataset:</strong> EM-DAT Worldwide Database (14,644 events, 228 nations).</li>
+                        <li><strong>Target:</strong> Hazard Subgroup (5 scientific environmental classes).</li>
+                        <li><strong>Models:</strong> Logistic, Decision Tree, Random Forest, SVM, KNN, MLP.</li>
+                        <li><strong>Top Performer:</strong> <strong>Random Forest Classifier</strong> with $73.30\%$ accuracy and $0.7360$ weighted F1-score.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 3: Problem Statement</h2>
+        <p class="slide-subtitle">Bridging Machine Learning Theory with Real-Time Critical Systems</p>
+        <div class="slide-content">
+            <div class="card" style="margin-bottom: 20px;">
+                <h3>Continuous Weather Temperature Forecasting</h3>
+                <p>Accurate ambient temperature prediction is critical for urban heatwave early warning, solar grid integration, and agricultural scheduling. Weather features exhibit complex diurnal and thermodynamic non-linearities requiring continuous, sub-degree regression algorithms.</p>
+            </div>
+            <div class="card">
+                <h3>Multi-Class Disaster Hazard Classification</h3>
+                <p>Natural catastrophes stem from disparate physical mechanisms (Hydrological floods vs. Meteorological cyclones vs. Geophysical earthquakes). Rapidly categorizing the primary environmental hazard type from early spatio-temporal indicators enables civil defense authorities to allocate emergency resources effectively.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 4: Project Objectives</h2>
+        <p class="slide-subtitle">Educational & Engineering Milestones Aligned with Course Rubrics</p>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Data Understanding & Cleaning:</strong> Ingest and audit 42,360 weather records and 14,644 disaster events without data deletion or artificial records.</li>
+                <li><strong>Leakage-Free Preprocessing:</strong> Implement cyclical trigonometric encodings ($\sin/\cos$) and train-only fitted <code>StandardScaler</code> pipelines.</li>
+                <li><strong>Algorithmic Benchmarking:</strong> Train, test, and cross-validate 6 distinct regression and 6 classification algorithms using identical splits.</li>
+                <li><strong>Optimization & Error Analysis:</strong> Execute GridSearchCV hyperparameter optimization on primary models; evaluate MSE, RMSE, MAE, $R^2$, Accuracy, Precision, Recall, and F1-Scores.</li>
+                <li><strong>Web Deployment:</strong> Deploy an interactive Streamlit application enabling live inference from user inputs.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 5: Open-Meteo Regression Dataset</h2>
+        <p class="slide-subtitle">Continuous Atmospheric Telemetry for Pune, India</p>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Dataset Parameters</h3>
+                    <ul>
+                        <li><strong>Coordinates:</strong> 18.52°N, 73.87°E (Elevation: 561m).</li>
+                        <li><strong>Period:</strong> January 2022 to October 2026.</li>
+                        <li><strong>Record Count:</strong> 42,360 hourly timestamps.</li>
+                        <li><strong>Target:</strong> <code>temperature_2m (°C)</code>.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Predictive Features</h3>
+                    <ul>
+                        <li>Apparent Temperature, Dew Point (°C).</li>
+                        <li>Relative Humidity (%), Surface Pressure (hPa).</li>
+                        <li>Low, Mid, and High Cloud Cover (%).</li>
+                        <li>Wind Speed (km/h) & Direction (°).</li>
+                        <li>Vapour Pressure Deficit, Soil Temperature.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 6: Global Disaster Classification Dataset</h2>
+        <p class="slide-subtitle">Worldwide Disasters from EM-DAT (1970–2021)</p>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Dataset Scope</h3>
+                    <ul>
+                        <li><strong>Observations:</strong> 14,644 validated global disaster events.</li>
+                        <li><strong>Geographic Reach:</strong> 228 Countries across 5 Continents.</li>
+                        <li><strong>Temporal Depth:</strong> 52 historical years (1970–2021).</li>
+                        <li><strong>Integrity:</strong> 0 duplicate disaster IDs, 0 artificial records.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Target Class Breakdown (5 Classes)</h3>
+                    <ul>
+                        <li><strong>Hydrological:</strong> 5,985 records (40.87%)</li>
+                        <li><strong>Meteorological:</strong> 4,589 records (31.34%)</li>
+                        <li><strong>Biological:</strong> 1,530 records (10.45%)</li>
+                        <li><strong>Geophysical:</strong> 1,401 records (9.57%)</li>
+                        <li><strong>Climatological:</strong> 1,139 records (7.78%)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 7: Proposed Methodology & ML Lifecycle</h2>
+        <p class="slide-subtitle">Standardized 12-Stage Software Development Lifecycle</p>
+        <div class="slide-content">
+            <div class="card">
+                <p style="font-family: monospace; font-size: 0.95rem; line-height: 1.8;">
+                Dataset Ingestion ➔ Duplicate & Null Auditing ➔ Exploratory Data Analysis ➔<br>
+                Cyclical Feature Engineering ➔ Leakage-Free StandardScaler Pipeline ➔<br>
+                Stratified / Chronological 80:20 Splitting ➔ 5-Fold Cross-Validation ➔<br>
+                Baseline Model Training (6 Algorithms) ➔ Hyperparameter Tuning (GridSearchCV) ➔<br>
+                Performance Evaluation & Residual Auditing ➔ Streamlit Dashboard Deployment
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 8: Regression Model Benchmark Results</h2>
+        <p class="slide-subtitle">Empirical Comparison of 6 Regression Algorithms on Open-Meteo Dataset</p>
+        <div class="slide-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Algorithm</th>
+                        <th>R² Score</th>
+                        <th>RMSE (°C)</th>
+                        <th>MAE (°C)</th>
+                        <th>5-Fold CV R²</th>
+                        <th>Train Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td><strong>Support Vector Regression (SVR)</strong> <span class="badge">BEST</span></td><td><strong>0.9996</strong></td><td><strong>0.0942</strong></td><td><strong>0.0704</strong></td><td>0.9986</td><td>2.46s</td></tr>
+                    <tr><td>2</td><td>Multi-Layer Perceptron (MLP)</td><td>0.9993</td><td>0.1281</td><td>0.1007</td><td>0.9910</td><td>5.07s</td></tr>
+                    <tr><td>3</td><td>Random Forest Regressor</td><td>0.9992</td><td>0.1391</td><td>0.0953</td><td>0.9967</td><td>2.68s</td></tr>
+                    <tr><td>4</td><td>Linear Regression</td><td>0.9980</td><td>0.2205</td><td>0.1638</td><td>0.9979</td><td>0.47s</td></tr>
+                    <tr><td>5</td><td>Decision Tree Regressor</td><td>0.9954</td><td>0.3351</td><td>0.2545</td><td>0.9878</td><td>0.22s</td></tr>
+                    <tr><td>6</td><td>K-Nearest Neighbors (KNN)</td><td>0.9863</td><td>0.5750</td><td>0.4379</td><td>0.9651</td><td>0.01s</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 9: Classification Model Benchmark Results</h2>
+        <p class="slide-subtitle">Empirical Comparison of 6 Classification Algorithms on Global Disaster Dataset</p>
+        <div class="slide-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Algorithm</th>
+                        <th>Test Accuracy</th>
+                        <th>Weighted Precision</th>
+                        <th>Weighted Recall</th>
+                        <th>Weighted F1</th>
+                        <th>Train Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td><strong>Random Forest Classifier</strong> <span class="badge">BEST</span></td><td><strong>73.30%</strong></td><td><strong>0.7418</strong></td><td><strong>0.7330</strong></td><td><strong>0.7360</strong></td><td>0.54s</td></tr>
+                    <tr><td>2</td><td>Multi-Layer Perceptron (MLP)</td><td>68.97%</td><td>0.6954</td><td>0.6897</td><td>0.6826</td><td>2.08s</td></tr>
+                    <tr><td>3</td><td>Support Vector Machine (SVM)</td><td>68.69%</td><td>0.6974</td><td>0.6869</td><td>0.6809</td><td>16.26s</td></tr>
+                    <tr><td>4</td><td>Decision Tree Classifier</td><td>67.40%</td><td>0.6968</td><td>0.6740</td><td>0.6806</td><td>0.09s</td></tr>
+                    <tr><td>5</td><td>K-Nearest Neighbors (KNN)</td><td>68.18%</td><td>0.6789</td><td>0.6818</td><td>0.6782</td><td>0.002s</td></tr>
+                    <tr><td>6</td><td>Logistic Regression</td><td>59.51%</td><td>0.6253</td><td>0.5951</td><td>0.6014</td><td>0.33s</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 10: Hyperparameter Optimization Impact</h2>
+        <p class="slide-subtitle">Before-versus-After GridSearchCV Tuning on Primary Models</p>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Regression: Random Forest Tuning</h3>
+                    <ul>
+                        <li><strong>Parameters:</strong> <code>n_estimators: 150</code>, <code>max_depth: 15</code>, <code>min_samples_split: 2</code>.</li>
+                        <li><strong>Baseline R²:</strong> 0.9992 ➔ <strong>Optimized R²:</strong> <strong>0.9995</strong></li>
+                        <li><strong>Baseline RMSE:</strong> 0.1391°C ➔ <strong>Optimized RMSE:</strong> <strong>0.1130°C</strong></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Classification: Random Forest Tuning</h3>
+                    <ul>
+                        <li><strong>Parameters:</strong> <code>n_estimators: 200</code>, <code>max_depth: 20</code>, <code>class_weight: balanced_subsample</code>.</li>
+                        <li><strong>Baseline F1:</strong> 0.7360 ➔ <strong>Optimized F1:</strong> <strong>0.7366</strong></li>
+                        <li><strong>Outcome:</strong> Enhanced minority class recall (Biological F1: 0.88, Geophysical F1: 0.87).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 11 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 11: Comparative Algorithmic Analysis</h2>
+        <p class="slide-subtitle">Bias-Variance Tradeoffs and Computational Efficiency</p>
+        <div class="slide-content">
+            <div class="card" style="margin-bottom: 15px;">
+                <h3>Why SVR and Random Forest Outperformed Others</h3>
+                <p><strong>SVR in Regression:</strong> The $\epsilon$-insensitive loss function ignores small atmospheric turbulence below $0.1^\circ\text{C}$, fitting a smooth, high-margin continuous boundary that generalizes with near-zero error.</p>
+                <p><strong>Random Forest in Classification:</strong> Disaster occurrences follow strict non-linear physical rules (cyclones require ocean warmth; droughts require prolonged duration). Random Forest naturally uncovers orthogonal decision thresholds while bagging dampens sample variance.</p>
+            </div>
+            <div class="card">
+                <h3>Underperformance of Linear Models in Disaster Classification</h3>
+                <p>Logistic Regression attained only $59.51\%$ accuracy because geographical coordinates and multi-hazard interactions cannot be partitioned by planar linear hyperplanes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 12 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 12: Interactive Web Application (Streamlit)</h2>
+        <p class="slide-subtitle">Live Demonstration of Saved Joblib Models and Real-Time Inference</p>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Home Dashboard:</strong> Comprehensive project overview and dual-task architecture.</li>
+                <li><strong>Regression Module:</strong> Real-time temperature slider inputs predicting ambient temperature within sub-degree precision.</li>
+                <li><strong>Classification Module:</strong> Disaster parameter dropdowns classifying hazard subgroup with live probability distributions.</li>
+                <li><strong>Model Comparison Dashboard:</strong> Interactive cross-model metrics tables and wall-clock training time charts.</li>
+                <li><strong>Execution Command:</strong> <code>streamlit run app.py</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 13 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 13: Ethical & Societal Implications</h2>
+        <p class="slide-subtitle">Responsible AI Deployment in Climate & Hazard Prediction</p>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Public Safety & Early Warning:</strong> Real-time temperature predictions enable proactive urban heatwave advisories, protecting vulnerable elderly and outdoor workers.</li>
+                <li><strong>Humanitarian Aid Optimization:</strong> Rapid hazard classification assists international disaster relief agencies (UN OCHA, Red Cross) in deploying specialized equipment.</li>
+                <li><strong>Algorithmic Accountability:</strong> Predictions must be deployed as decision-support advisories for human meteorologists and disaster authorities, avoiding single-point automated failures.</li>
+                <li><strong>Data Privacy:</strong> Models utilize public telemetry with zero personally identifiable information (PII).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 14 -->
+    <div class="slide">
+        <h2 class="slide-title">Slide 14: Conclusion & Future Scope</h2>
+        <p class="slide-subtitle">Summary of Achievements and Research Extensions</p>
+        <div class="slide-content">
+            <div class="card" style="margin-bottom: 15px;">
+                <h3>Summary of Outcomes</h3>
+                <p>Successfully completed Activity No. 2 with 100% compliance with course rubrics. 12 machine learning algorithms were implemented, tuned, cross-validated, and deployed in an interactive Streamlit application using genuine datasets.</p>
+            </div>
+            <div class="card">
+                <h3>Future Work</h3>
+                <ul>
+                    <li>Deep learning time-series models (LSTM, Temporal Fusion Transformers) for multi-step ahead weather forecasting.</li>
+                    <li>Multi-modal geospatial integration fusing satellite imagery with atmospheric telemetry for hyperlocal flood inundation mapping.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()">◀ Previous</button>
+    <div class="slide-indicator" id="indicator">Slide 1 of 14</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()">Next ▶</button>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const indicator = document.getElementById('indicator');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function showSlide(index) {
+        slides.forEach((s, i) => s.classList.toggle('active', i === index));
+        indicator.textContent = `Slide ${index + 1} of ${slides.length}`;
+        prevBtn.disabled = index === 0;
+        nextBtn.disabled = index === slides.length - 1;
+    }
+
+    function prevSlide() { if (currentSlide > 0) { currentSlide--; showSlide(currentSlide); } }
+    function nextSlide() { if (currentSlide < slides.length - 1) { currentSlide++; showSlide(currentSlide); } }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+    });
+</script>
+
+</body>
+</html>

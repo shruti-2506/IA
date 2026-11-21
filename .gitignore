@@ -43,3 +43,14 @@ dist/
 *.tmp
 temp/
 tmp/
+
+# Machine Learning models & serialized arrays
+*.joblib
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.onnx
+models/*.joblib
+

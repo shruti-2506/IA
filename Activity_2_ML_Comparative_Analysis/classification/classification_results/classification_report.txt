@@ -1,0 +1,13 @@
+Top Model: Random Forest
+============================================================
+                precision    recall  f1-score   support
+
+    Biological       0.88      0.88      0.88       306
+Climatological       0.56      0.52      0.54       228
+   Geophysical       0.87      0.87      0.87       280
+  Hydrological       0.74      0.76      0.75      1197
+Meteorological       0.69      0.68      0.69       918
+
+      accuracy                           0.74      2929
+     macro avg       0.75      0.74      0.74      2929
+  weighted avg       0.74      0.74      0.74      2929

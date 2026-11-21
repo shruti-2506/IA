@@ -1,0 +1,7 @@
+Algorithm,Accuracy,Precision_Macro,Recall_Macro,F1_Macro,Precision_Weighted,Recall_Weighted,F1_Weighted,CV_Accuracy_Mean,CV_Accuracy_Std,Train_Time_Sec,Test_Time_Sec,Model_File,Rank
+Random Forest,0.733,0.7335,0.7553,0.7417,0.7418,0.733,0.736,0.6798,0.0065,0.5367,0.0746,random_forest.joblib,1
+Multi-Layer Perceptron,0.6897,0.7482,0.667,0.6862,0.6954,0.6897,0.6826,0.6578,0.0085,2.0801,0.003,multi-layer_perceptron.joblib,2
+Support Vector Machine,0.6869,0.7591,0.6663,0.6862,0.6974,0.6869,0.6809,0.6547,0.0118,16.2607,1.7759,support_vector_machine.joblib,3
+Decision Tree,0.674,0.6895,0.7239,0.698,0.6968,0.674,0.6806,0.628,0.0128,0.0867,0.0019,decision_tree.joblib,4
+K-Nearest Neighbors,0.6818,0.695,0.66,0.6727,0.6789,0.6818,0.6782,0.6335,0.0145,0.002,0.1134,k-nearest_neighbors.joblib,5
+Logistic Regression,0.5951,0.6316,0.6603,0.6341,0.6253,0.5951,0.6014,0.5835,0.0155,0.329,0.001,logistic_regression.joblib,6
